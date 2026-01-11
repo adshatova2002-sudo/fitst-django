@@ -15,5 +15,4 @@
 Перейти на сайт https://github.com/ , нажать на Sign up for GitHub и зарегистрироваться
 
 ## Run
-Запустите Pycharm. С помощью командной строки создайте связь между GitHub и Pycharm.
-Готово!
+Запустите Pycharm.
