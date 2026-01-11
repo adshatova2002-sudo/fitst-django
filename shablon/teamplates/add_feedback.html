@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{title}}</h2>
+
+<form action="{% url 'end_page' %}" method="POST">
+  {% csrf_token %}
+
+  <label for="name" class="form-label"></label>
+  <input name="name" id="name" placeholder="Введите ваше имя" class="form-input" required>
+
+  <label for="email" class="form-label"></label>
+  <input type="email" name="email" id="email" placeholder="Введите вашу почту" class="form-input" required>
+
+  <label for="text" class="form-label"></label>
+  <textarea name="text" id="text" placeholder="Напишите отзыв" class="form-input-text" rows="4" required style="font-family:Verdana"></textarea>
+
+  <div style="display: none;">
+    <label for="checkbox">Проверено</label>
+    <input type="checkbox" id="checkbox" name="checkbox">
+  </div>
+
+  <button type="submit" class="form-button">Отправить</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ title }}</h2>
+
+<a href="{% url 'add_feedback_page' %}" class="button-link">
+    <button type="button">Добавить отзыв</button>
+</a>
+
+{% for el in feedback %}
+<div class="feed">
+    <h3>{{el.name}}</h3>
+    <h4>{{el.email}}</h4>
+    <p>{{el.text}}</p>
+</div>
+
+{% endfor %}
+
+{% endblock %}

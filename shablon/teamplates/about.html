@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{title}}</h2>
+<p>Меня зовут Шатова Анастасия (для друзей я просто Настя). Этот блог посвящен моей жизни. На данной странице вы можете найти контакты для связи со мной</p>
+<div class="slider">
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+    <div class="slides">
+        <div class="slide"><img src="\static\img\IMG0188.JPEG" width="370" height="500"></div>
+        <div class="slide"><img src="\static\img\IMG0640.JPEG" width="370" height="500"></div>
+        <div class="slide"><img src="\static\img\IMG1208.JPEG" width="370" height="500"></div>
+        <div class="slide"><img src="\static\img\IMG9026.JPEG" width="370" height="500"></div>
+    </div>
+    <div class="controls">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        <label for="slide4"></label>
+    </div>
+</div>
+<h3>Контакты</h3>
+<p>Telegram: @nshatova</p>
+<p>VK: @shatovaaaa</p>
+{% endblock %}

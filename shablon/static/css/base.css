@@ -1,0 +1,173 @@
+.container {
+    display: grid;
+    grid-template-areas: "header header"
+                         "sidebar content";
+    grid-template-columns: 250px auto;
+    grid-template-rows: 50px, 1fr;
+    gap: 10px;
+    font-family: 'Verdana';
+}
+
+.header{
+    grid-area: header;
+    background-color: #74E868;
+    padding: 0px 10px;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    align-self: start;
+    border: 15px dotted #74E868;
+    padding: 10px 20px;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+li{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+
+p{
+    font-size: 18px;
+}
+
+h1{
+    font-size: 25px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.content{
+    grid-area: content;
+    margin-top: -15px;
+    padding: 0px 10px;
+}
+
+/* слайды */
+.slider {
+    width: 370px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    transition: transform 0.75s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .slides {transform: translateX(0%);}
+#slide2:checked ~ .slides {transform: translateX(-100%);}
+#slide3:checked ~ .slides {transform: translateX(-200%);}
+#slide4:checked ~ .slides {transform: translateX(-300%);}
+
+.controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.controls label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: gray;
+    border-radius: 50%;
+    margin: 12px;
+    cursor: pointer;
+}
+
+/* кнопка перехода на страницу добавления отзыва */
+.button-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-link button {
+    padding: 10px 15px;
+    background-color: #74E868;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    border: 5px solid #74E868;
+}
+
+.button-link button:hover {
+    background-color: white;
+    border: 5px solid #74E868;
+}
+
+/* форма отзыва */
+.form-label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #74E868;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #74E868;
+    box-shadow: 0 0 0 2px #74E868;
+}
+
+.form-button {
+    padding: 10px 15px;
+    background-color: #74E868;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    border: 5px solid #74E868;
+    margin-top: 20px;
+}
+
+.form-button:hover {
+    background-color: white;
+    border: 5px solid #74E868;
+}
+
+.form-input-text{
+    width: 100%;
+    height: 200px;
+    padding: 8px;
+    border: 1px solid #74E868;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.form-input-text:focus {
+    outline: none;
+    border-color: #74E868;
+    box-shadow: 0 0 0 2px #74E868;
+}

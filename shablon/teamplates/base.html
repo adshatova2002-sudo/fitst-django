@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Блог Анастасии. Добро пожаловать, иногда тут весело</h2>
+    </div>
+    <div class="sidebar">
+        {% for key, value in menu.items %}
+        <li><a href="{{ value }}">{{ key }}</a></li>
+        {% endfor %}
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
