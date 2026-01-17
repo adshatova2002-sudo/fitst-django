@@ -1,18 +1,17 @@
-# First django project
-Инструкция по установке и запуску
-## Install
-1. Установка Python
-Перейти на сайт https://www.python.org/ 
-Открыть Downloads -> Windows и выбрать Download Windows installer (64-bit) версия Python 3.14.2.
+## Проверить версию Python
+python -v
 
-2. Установка Pycharm
-Перейти на сайт https://www.jetbrains.com/ и счкачать pycharm community edition.
+(версия должна начинаться с 3, т.е, например, 3.11.5)
 
-3. Установка Git
-Перейти на сайт https://git-scm.com/install/ , выбрать ОС Windows и нажать скачать. 
+## Активировать виртуальное окружение
+.\venv\Scripts\activate
 
-4. Регистрация в GitHub
-Перейти на сайт https://github.com/ , нажать на Sign up for GitHub и зарегистрироваться
+## Установка зависимостей
+pip install --upgrade pip
 
-## Run
-Запустите Pycharm.
+pip install -r requirements.txt
+
+## Запуск проекта
+cd shablon
+
+python .\manage.py runserver
